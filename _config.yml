@@ -31,10 +31,10 @@ baseurl: ""
 #############
 
 lang: "en"
-author: "John Smith"
-title: "{ John Smith }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+author: "Jan Comans"
+title: "{ Jan Comans }"
+description: "Blog and website of Jan Comans, blogging mainly for tech. Opinions expressed are mine."
+keywords: "jan, comans, personal, business"
 favicon: "/img/favicon.ico"
 404-img: "/img/labtocat.png"
 
@@ -58,8 +58,8 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "The lower you fall, the higher you'll fly."
-  - text: "Where’s your will to be weird?"
+  - text: "Welcome to my home on the web."
+#  - text: "Where’s your will to be weird?"
 
 me-img: "/img/jetpacktocat.png"
 
@@ -100,10 +100,10 @@ reddit-share: True
 google-plus-share: True
 tumblr-share: True
 pinterest-share: True
-pocket-share: True
-vkontakte-share: True
+#pocket-share: True
+#vkontakte-share: True
 
-disqus-shortname: "panossakkos"
+#disqus-shortname: "panossakkos"
 
 syntax-highlight: True
 
@@ -127,21 +127,21 @@ timeline-img: "/img/timeline/default.png"
 # Contact #
 ###########
 
-email: "your@email.here"
+email: "jan@comans.be"
 
 ##################
 # Social Buttons #
 ##################
 
 social:
+  - title: "linkedin"
+    url: "https://nl.linkedin.com/in/jan-comans-89659b13"
   - title: "facebook"
-    url: "https://facebook.com/"
-  - title: "twitter"
-    url: "https://twitter.com/"
+    url: "https://facebook.com/jancomans"
+  - title: "google-plus"
+    url: "https://plus.google.com/102074366036110280261"
   - title: "github"
-    url: "https://github.com/PanosSakkos/personal-jekyll-theme"
-  - title: "bitcoin"
-    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+    url: "https://github.com/jcomans"
   - title: "rss"
     url: "/feed.xml"
 
