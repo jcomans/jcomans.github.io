@@ -26,6 +26,8 @@ baseurl: ""
 
 #force-https: True
 
+markdown: kramdown
+
 #############
 # HTML Head #
 #############
