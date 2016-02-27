@@ -46,7 +46,7 @@ favicon: "/img/favicon.ico"
 
 black-favicon: "/img/black-lab-glass.ico"
 
-background-img: "../img/intro-bg.jpg"
+background-img: "../img/background.jpg"
 
 ##############################
 # Dynamic Text on the Header #
@@ -63,7 +63,7 @@ lines: # You can add HTML Tags in the Text
   - text: "Welcome to my home on the web."
 #  - text: "Where’s your will to be weird?"
 
-me-img: "/img/jetpacktocat.png"
+me-img: "/img/mugshot.png"
 
 ##############################
 # Color the browser elements #
