@@ -1,65 +1,80 @@
 ---
 layout: resume
 section-type: post
-title: Setting up the Blog
+title: Resume
 ---
 # Resume
 
+Download a pdf version of my resume [here](/content/Resume_JanComans.pdf)
+
+
+*Straightforward problem solver with a strong engineering and software development foundation. Fast learner and effective communicator. Able to provide high quality technical solutions while keeping track of business requirements.*
+
+## Skills
+
+* Fluent in C++11, C++98, Python, Lua
+* Boost, STL, Qt, GTK+, FLTK, OpenGL, CMake
+* Familiar with Java, Objective-C, Visual Basic, Scheme/Lisp, PHP, Shell scripting
+* Preference for Git, experience with SVN and CVS
+* GNU/Linux enthusiast
+* LaTeX, Matlab
+* Agile Methodologies
+* Native Dutch, fluent English, basic French
+
 ## Professional Experience
 
-### Dec 2014 - Present 
+### Software Engineer, Flight Performance 
 
-**Lockheed Martin Commercial Flight Training**/*Software Engineer, Flight Performance*
+**Lockheed Martin Commercial Flight Training** / Sassenheim /*Dec 2014 to present*
 
-* 787 Flight model and trim module development
-* Design and development of a custom validation tool for running QTG’s
-* On site work at the AeroMexico training facility on the QTG package before qualification
-* Stability improvements for the 787 Integrated Panel Trainer
+*Development of a new simulator validation tool that increased developer productivity by reducing test setup times from minutes to seconds.*
 
-### 2009 - Present
+* Boeing 787 flight model development and validation
+* Boeing 787 high performance flight model trim module development
+* Design and development of a custom validation tool for running simulator validation tests (QTG’s). 
+  * High performance C++ backend for real-time test performance
+  * Flexible embedded lua script engine for easy test scripting
+* Latency validation on the AeroMexico Boeing 787 Full Flight Simulator
+* On site work at the AeroMexico training facility on the QTG package in preparation of the formal DGAC qualification of the Boeing 787 Full Flight Simulator 
+* Major stability improvements on the communication layer for the Boeing 787 Integrated Panel Trainer
 
-**Delft University of Technology**/*PhD Candidate*
+### PhD Candidate
 
-#### Topic
-*Risk Perception in Ecological Information Systems through Intentional Constraints*
+**Delft University of Technology** / Delft / *2009 to present*
 
-Past research on ecological displays has mainly focused on visualizing physical constraints. This research aims to also include and visualize procedural and regulatory constraints to ensure operators comply with safety buffers, but are able to disregard them in emergency situations while being aware of physical system limitations. 
+*Research: Risk Perception in Ecological Information Systems through Intentional Constraints*
 
-#### Projects
-
-* CAMMI (Atemis JU) Design of Cognitive Adaptive Man Machine Interfaces. Technical and administrative lead for the TU Delft contribution to the EFIS domain (3yr)
-* Software and hardware support for the on board Flight Test Information System of the Cessna Citation test aircraft operated by the [Control and Simulation Departement of the TU Delft](http://www.cs.lr.tudelft.nl)
-* Adapting [FlightGear](http://www.flightgear.org) to run on a multi channel image generator for the [Simona Research Simulator](http://www.simona.tudelft.nl) and the HMI Lab
-
-#### Educational tasks
-
-* 6x Supervision of MSc. thesis (9mo)
-* 2x Supervision of final BSc. project group (10wk)
-* Tutor for the Control Theory practical
-* Tutor for the Instrumentation and Signals practical
+* CAMMI (Artemis JU) Design of Cognitive Adaptive Man Machine Interfaces. Technical and administrative lead for the TU Delft contribution to the EFIS domain (3yr)
+* Software and hardware support for the on board Flight Test Information System of the Cessna Citation test aircraft operated by the [TU Delft](www.cs.tudelft.nl)
+* Adapting [FlightGear](www.flightgear.org) to run on a multi channel image generator for the [Simona Research Simulator](www.simona.tudelft.nl) and the HMI Lab
+* 6x Supervision of MSc. thesis (9mo) and of two final BSc. project groups (10wk)
+* Tutor for the Control Theory practical and the Instrumentation and Signals practical
 * Organization and coordination of the teaching assistants for the Flight Test practical
 * Cabin operator/experiment coordinator for the Flight Test practical test flights
 
-## Internships
 
-### 2007: Boeing Research and Technologies Europe
+### Software Engineer (Internship)
+**Boeing Research and Technologies Europe** / Madrid, Spain / *Jul 2007 to Dec 2007*
 
-Development of a high fidelity aviation systems simulator with the Advanced Trajectory Technologies group (6mo)
+*Development of a high fidelity aviation systems simulator with the Advanced Trajectory Technologies group (6mo)*
 
-### 2006: Belgian Federal Government, Department of Finances
-
-Administrative Assistance (1mo)
 
 ## Education
 
-### 2006 - 2009: Master of Science (MSc) in Aerospace Engineering
+### Master of Science (MSc) in Aerospace Engineering
 
-Department of Control and Simulation, Faculty of Aerospace Engineering, TU Delft
+**Department of Control and Simulation, Faculty of Aerospace Engineering, TU Delft** / *2006 - 2009*
 
-Thesis: Visual Delay Reduction in the Simona Research Simulator
+*Master Thesis: Visual Delay Reduction in the Simona Research Simulator*
 
-### 2002 - 2006: Bachelor of Science (BSc) in Aerospace Engineering
+### Bachelor of Science (BSc) in Aerospace Engineering
 
-Faculty of Aerospace Engineering, TU Delft
+**Faculty of Aerospace Engineering, TU Delft** / *2002 - 2006*
 
-Final Project: Design of autonomous underwater vehicles using swarm technology
+*Final Project: Design of autonomous underwater vehicles using swarm technology*
+
+## Hobbies
+
+* Playing the saxophone
+* Cooking
+* Flying (Private pilot license, single engine piston)
