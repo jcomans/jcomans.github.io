@@ -25,7 +25,7 @@ Download a pdf version of my resume [here](/content/Resume_JanComans.pdf)
 
 ### Software Engineer, Flight Performance 
 
-**Lockheed Martin Commercial Flight Training** / Sassenheim /*Dec 2014 to present*
+**Lockheed Martin Commercial Flight Training** / Sassenheim /*Dec 2014 to May 2016*
 
 *Development of a new simulator validation tool that increased developer productivity by reducing test setup times from minutes to seconds.*
 
