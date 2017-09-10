@@ -132,8 +132,12 @@ syntax-highlight: True
 
 events:
 
+  - image: "/img/timeline/tass.png"
+    date: "Sep 2016 - Present"
+    description: "TASS International"
+
   - image: "/img/timeline/tudelft.png"
-    date: "Jun 2016 - Present"
+    date: "Jun 2016 - Oct 2017"
     description: "Finishing PhD Thesis Writing"
 
   - image: "/img/timeline/LM.png"
