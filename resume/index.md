@@ -5,9 +5,6 @@ title: Resume
 ---
 # Resume
 
-Download a pdf version of my resume [here](/content/Resume_JanComans.pdf)
-
-
 *Straightforward problem solver with a strong engineering and software development foundation. Fast learner and effective communicator. Able to provide high quality technical solutions while keeping track of business requirements.*
 
 ## Skills
@@ -22,6 +19,14 @@ Download a pdf version of my resume [here](/content/Resume_JanComans.pdf)
 * Native Dutch, fluent English, basic French
 
 ## Professional Experience
+
+### Software Engineer, Real-Time HIL Applications
+
+**TASS International** / Rijswijk /*Sep 2016 to Present*
+
+*Development of real-time solutions to enable use of PreScan in HIL systems*
+
+* Scrum master
 
 ### Software Engineer, Flight Performance 
 
@@ -40,7 +45,7 @@ Download a pdf version of my resume [here](/content/Resume_JanComans.pdf)
 
 ### PhD Candidate
 
-**Delft University of Technology** / Delft / *2009 to present*
+**Delft University of Technology** / Delft / *Aug 2009 to Oct 2017*
 
 *Research: Risk Perception in Ecological Information Systems through Intentional Constraints*
 
