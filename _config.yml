@@ -132,9 +132,13 @@ syntax-highlight: True
 
 events:
 
+  - image: "/img/timeline/siemens.png"
+    date: "Mar 2018 - Present"
+    description: "Siemens - Simcenter Tire"
+
   - image: "/img/timeline/tass.png"
-    date: "Sep 2016 - Present"
-    description: "TASS International"
+    date: "Sep 2016 - Mar 2018"
+    description: "TASS International - Prescan"
 
   - image: "/img/timeline/tudelft.png"
     date: "Jun 2016 - Oct 2017"
