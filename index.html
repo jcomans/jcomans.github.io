@@ -1,9 +1,191 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A simple personal page" />
+    <meta name="author" content="Jan Comans" />
+    
+    <title>Jan Comans</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body>
-    Well, this is awkward...
+  <body  id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top">Jan Comans</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead">
+      <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase">Jan Comans</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Welcome to my page. This is still a work in progress.</h2>
+            <img src="assets/img/mugshot.png" class="rounded mx-auto d-block" alt="...">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About-->
+    <section class="about-section text-center" id="about">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-white mb-4">About</h2>
+            <p class="text-white-50">
+              There's not a lot on this page yet. You can find my resume <a href="#resume">here</a>.
+              If you're looking to get in touch, click <a href="#contact">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Resume-->
+    <section class="resume-section text-center" id="resume">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-white mb-4">Resume</h2>
+
+            <div class="text-start">
+              
+              <p class="text-white-50"><em>Straightforward problem solver with a strong engineering and software development foundation. Fast learner and effective communicator. Able to provide high quality technical solutions while keeping track of business requirements.</em></p>
+
+              <h3 class="text-white-50" id="skills">Skills</h3>
+
+              <ul class="text-white-50">
+                <li>Fluent in C++11, C++98, Python, Lua</li>
+                <li>Boost, STL, Qt, GTK+, FLTK, OpenGL, CMake</li>
+                <li>Familiar with Java, Objective-C, Visual Basic, Scheme/Lisp, PHP, Shell scripting</li>
+                <li>Preference for Git, experience with SVN and CVS</li>
+                <li>GNU/Linux enthusiast</li>
+                <li>LaTeX, Matlab</li>
+                <li>Agile Methodologies</li>
+                <li>Native Dutch, fluent English, basic French</li>
+              </ul>
+
+              <h3 class="text-white-50" id="professional-experience">Professional Experience</h3>
+
+              <h4 class="text-white-50" id="software-engineer-real-time-hil-applications">Software Engineer, Real-Time HIL Applications</h4>
+
+              <p class="text-white-50"><strong>TASS International</strong> / Rijswijk /<em>Sep 2016 to Present</em></p>
+
+              <p class="text-white-50"><em>Development of real-time solutions to enable use of PreScan in HIL systems</em></p>
+
+              <ul class="text-white-50">
+                <li>Scrum master</li>
+              </ul>
+
+              <h4 class="text-white-50" id="software-engineer-flight-performance">Software Engineer, Flight Performance</h4>
+
+              <p class="text-white-50"><strong>Lockheed Martin Commercial Flight Training</strong> / Sassenheim /<em>Dec 2014 to May 2016</em></p>
+
+              <p class="text-white-50"><em>Development of a new simulator validation tool that increased developer productivity by reducing test setup times from minutes to seconds.</em></p>
+
+              <ul class="text-white-50">
+                <li>Boeing 787 flight model development and validation</li>
+                <li>Boeing 787 high performance flight model trim module development</li>
+                <li>Design and development of a custom validation tool for running simulator validation tests (QTG’s).
+                  <ul>
+                    <li>High performance C++ backend for real-time test performance</li>
+                    <li>Flexible embedded lua script engine for easy test scripting</li>
+                  </ul>
+                </li>
+                <li>Latency validation on the AeroMexico Boeing 787 Full Flight Simulator</li>
+                <li>On site work at the AeroMexico training facility on the QTG package in preparation of the formal DGAC qualification of the Boeing 787 Full Flight Simulator</li>
+                <li>Major stability improvements on the communication layer for the Boeing 787 Integrated Panel Trainer</li>
+              </ul>
+
+              <h4 class="text-white-50" id="phd-candidate">PhD Candidate</h4>
+
+              <p class="text-white-50"><strong>Delft University of Technology</strong> / Delft / <em>Aug 2009 to Oct 2017</em></p>
+
+              <p class="text-white-50"><em>Research: Risk Perception in Ecological Information Systems through Intentional Constraints</em></p>
+
+              <ul class="text-white-50">
+                <li>CAMMI (Artemis JU) Design of Cognitive Adaptive Man Machine Interfaces. Technical and administrative lead for the TU Delft contribution to the EFIS domain (3yr)</li>
+                <li>Software and hardware support for the on board Flight Test Information System of the Cessna Citation test aircraft operated by the <a href="www.cs.tudelft.nl">TU Delft</a></li>
+                <li>Adapting <a href="www.flightgear.org">FlightGear</a> to run on a multi channel image generator for the <a href="www.simona.tudelft.nl">Simona Research Simulator</a> and the HMI Lab</li>
+                <li>6x Supervision of MSc. thesis (9mo) and of two final BSc. project groups (10wk)</li>
+                <li>Tutor for the Control Theory practical and the Instrumentation and Signals practical</li>
+                <li>Organization and coordination of the teaching assistants for the Flight Test practical</li>
+                <li>Cabin operator/experiment coordinator for the Flight Test practical test flights</li>
+              </ul>
+
+              <h4 class="text-white-50" id="software-engineer-internship">Software Engineer (Internship)</h4>
+              <p class="text-white-50"><strong>Boeing Research and Technologies Europe</strong> / Madrid, Spain / <em>Jul 2007 to Dec 2007</em></p>
+
+              <p class="text-white-50"><em>Development of a high fidelity aviation systems simulator with the Advanced Trajectory Technologies group (6mo)</em></p>
+
+              <h3 class="text-white-50" id="education">Education</h3>
+
+              <h4 class="text-white-50" id="master-of-science-msc-in-aerospace-engineering">Master of Science (MSc) in Aerospace Engineering</h4>
+
+              <p class="text-white-50"><strong>Department of Control and Simulation, Faculty of Aerospace Engineering, TU Delft</strong> / <em>2006 - 2009</em></p>
+
+              <p class="text-white-50"><em>Master Thesis: Visual Delay Reduction in the Simona Research Simulator</em></p>
+
+              <h4 class="text-white-50" id="bachelor-of-science-bsc-in-aerospace-engineering">Bachelor of Science (BSc) in Aerospace Engineering</h4>
+
+              <p class="text-white-50"><strong>Faculty of Aerospace Engineering, TU Delft</strong> / <em>2002 - 2006</em></p>
+
+              <p class="text-white-50"><em>Final Project: Design of autonomous underwater vehicles using swarm technology</em></p>
+
+              <h3 class="text-white-50" id="hobbies">Hobbies</h3>
+
+              <ul class="text-white-50">
+                <li>Playing the saxophone</li>
+                <li>Cooking</li>
+                <li>Flying (Private pilot license, single engine piston)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact-->
+    <section class="contact-section justify-content-center bg-black" id="contact">
+      <div class="container px-4 px-lg-5">
+        <div class="social d-flex justify-content-center">
+          <a class="mx-2" href="https://nl.linkedin.com/in/jan-comans-89659b13"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="mx-2" href="https://facebook.com/jancomans"><i class="fab fa-facebook-f"></i></a>
+          <a class="mx-2" href="https://github.com/jcomans"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Jan Comans 2022</div></footer>
+    
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
   </body>
 </html>
