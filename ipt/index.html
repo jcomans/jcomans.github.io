@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="ipt.css">
+  <script src="ipt.js"></script>
+</head>
+
+<body>
+
+  <div id="cockpit-area">
+    <img src="cockpit_poster.png">
+  </div>
+
+  <div id="checklist-area">
+    <select name="checklist" id="checklist-selection">
+    </select>
+    <div>
+      <label>Show memory items: </label><input type="checkbox" id="checklist-show-memory">
+    </div>
+    <input type="button" id="checklist-prev" value="Previous">
+    <input type="button" id="checklist-reset" value="Reset">
+    <input type="button" id="checklist-next" value="Next">
+
+    <table id="checklist-content">
+    </table>
+  </div>
+
+  <script>load_ipt();</script>
+
+</body>
+
+</html>
