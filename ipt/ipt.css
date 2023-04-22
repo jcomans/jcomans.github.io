@@ -35,6 +35,11 @@ area {
 
 }
 
+#checklist-complete {
+    color: green;
+    padding: 10px 20px
+}
+
 #context-menu {
     position: fixed;
     z-index: 10000;

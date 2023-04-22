@@ -694,6 +694,8 @@ function update_checklist_content() {
     const chk_content = document.getElementById('checklist-content');
     const chk_show_memory = document.getElementById('checklist-show-memory');
 
+    const chk_complete = document.getElementById('checklist-complete');
+
     row_pointers = [];
     current_item = 0;
     current_section = chk_select.selectedIndex;
@@ -701,6 +703,7 @@ function update_checklist_content() {
     const section = checklist[current_section];
 
     chk_content.innerHTML = '';
+    chk_complete.innerHTML = '';
 
     section.items.forEach(entry => {
         const row = document.createElement('tr');
@@ -747,12 +750,16 @@ function popup_click(action) {
             current_item += 1;
 
             if (current_item == checklist_.length){
-                window.alert('Checklist complete!');
+                const chk_complete = document.getElementById('checklist-complete');
+                chk_complete.innerHTML = '--CHECKLIST COMPLETE--';
             }
         }
         else {
             window.alert('Nope, that is not correct.');
         }
+    }
+    else{
+        window.alert('Checklist already complete. Click \'Reset\' or select another checklist.');
     }
 }
 
