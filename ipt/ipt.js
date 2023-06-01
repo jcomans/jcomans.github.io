@@ -9,6 +9,7 @@ const cockpit_data = [
             'asi-70': 'Check 70kts',
             'asi-75': 'Check 75kts',
             'asi-80': 'Check 80kts',
+            'asi-lt-100': 'Check < 100kts'
         }
     },
     { 
@@ -345,7 +346,11 @@ const cockpit_data = [
             'gen-outside': 'Check outside',
             'gen-taxi': 'Brief taxi',
             'gen-to-brief': 'Brief take off',
-            'gen-app-brief': 'Brief approach'
+            'gen-app-brief': 'Brief approach',
+            'gen-flt-cont': 'Continue Flight',
+            'gen-exp-fail': 'Expect engine failure',
+            'gen-land-asap': 'Land ASAP',
+            'gen-ne-off': 'Switch off non essential'
         }
     }
 ];
@@ -426,6 +431,7 @@ const checklist = [
         items: [
             { action: 'Nose Wheel', check: 'Aligned', event: 'brk-align'},
             { action: 'Parking brake', check: 'Set', event: 'brk-set'},
+            { action: 'FADEC self-check'},
             { action: 'Power', check: 'IDLE', event: 'thr-00'},
             { action: 'FADEC Lights', check: 'Both OFF', event: 'wp-fadec-off'},
             { action: 'FADEC Test Button', check: 'Press & Hold', event: 'fadec-test-hold'},
@@ -508,13 +514,16 @@ const checklist = [
         id: 'circuit',
         name: 'Circuit',
         items: [
+            { action: 'Downwind'},
             { action: 'In', check: 'White band', event: 'asi-white', memory: true},
             { action: 'Flaps', check: '1st notch', event: 'flp-one', memory: true},
             { action: 'Power', check: '50%', event: 'thr-50', memory: true},
             { action: 'Speed', check: '80kts', event: 'asi-80', memory: true},
             { action: 'Landing light', check: 'ON', event: 'ldg-on', memory: true},
+            { action: 'Base'},
             { action: 'Power', check: '25%', event: 'thr-25', memory: true},
             { action: 'Speed', check: '75kts', event: 'asi-75', memory: true},
+            { action: 'Final'},
             { action: 'Flaps', check: '2nd notch', event: 'flp-two', memory: true},
             { action: 'Speed', check: '70kts', event: 'asi-70', memory: true}
         ]
@@ -579,7 +588,13 @@ const checklist = [
         id: 'fadec-flash',
         name: 'FADEC light A or B flashing',
         items: [
-            { action: 'FADEC test button', check: 'Press at least 2 sec.', event: 'fadec-check-fault'}
+            { action: 'FADEC test button', check: 'Press at least 2 sec.', event: 'fadec-check-fault'},
+            { action: ''},
+            { action: 'If FADEC lights both OFF', check: 'Continue flight', event: 'gen-flt-cont'},
+            { action: ''},
+            { action: 'If FADEC A or B steady ON', check: 'IAS < 100 kts', event: 'asi-lt-100'},
+            { action: '', check: 'Expect engine failure', event: 'gen-exp-fail'},
+            { action: '', check: 'Land ASAP', event: 'gen-land-asap'}
         ]
     },
     {
@@ -588,7 +603,13 @@ const checklist = [
         items: [
             { action: 'Alternator Circuit Breaker', check: 'Pull OUT, then IN', event: 'alt-brk-pull'},
             { action: '', check: '', event: 'alt-brk-in'},
-            { action: 'Voltmeter', check: 'In green', event: 'wqi-volt-green'}
+            { action: 'Voltmeter', check: 'In green', event: 'wqi-volt-green'},
+            { action: ''},
+            { action: 'If normal operation has not resumed'},
+            { action: ''},
+            { action: 'Alternator Circuit Breaker', check: 'Pull OUT', event: 'alt-brk-pull'},
+            { action: 'Non-essential equipment', check: 'All OFF', event: 'gen-ne-off'},
+            { action: '', check: 'Land as soon as practicable', event: 'gen-land-asap'}
         ]
     },
     {
@@ -600,7 +621,13 @@ const checklist = [
             { action: 'Electrical equipment', check: 'All off', event: 'radio-off'},
             { action: '', check: '', event: 'tx-off'},
             { action: 'Cabin Ventilation/Cabin Heat', check: 'OFF', event: 'ch-off'},
-            { action: '', check: '', event: 'chc-off'}
+            { action: '', check: '', event: 'chc-off'},
+            { action: ''},
+            { action: 'If fire persists or not localized'},
+            { action: ''},
+            { action: 'Battery Switch', check: 'OFF', event: 'bat-off'},
+            { action: 'Alternator Circuit Breaker', check: 'Pull OUT', event: 'alt-brk-pull'},
+            { action: '', check: 'Land ASAP', event: 'gen-land-asap'}
         ]
     }
 ];
@@ -708,21 +735,29 @@ function update_checklist_content() {
     section.items.forEach(entry => {
         const row = document.createElement('tr');
         const action = document.createElement('td');
-        const check = document.createElement('td');
 
-        action.innerText = entry.action;
-        check.innerText = entry.check;
+        if (entry.check) {
+            const check = document.createElement('td');
 
-        if (entry?.memory) {
-            row.classList.add('memory');
+            action.innerText = entry.action;
+            check.innerText = entry.check;
 
-            if (!chk_show_memory.checked) {
-                row.classList.add('hidden');
+            if (entry?.memory) {
+                row.classList.add('memory');
+
+                if (!chk_show_memory.checked) {
+                    row.classList.add('hidden');
+                }
             }
+
+            row.append(action);
+            row.append(check);
+        } else {
+            action.setAttribute('colspan', '2');
+            action.innerText = entry.action;
+            row.append(action);
         }
 
-        row.append(action);
-        row.append(check);
         chk_content.append(row);
         row_pointers.push(row);
     });
@@ -743,8 +778,12 @@ function popup_click(action) {
 
     const checklist_ = checklist[current_section].items;
 
+    while (!checklist_[current_item].event){
+        current_item++;
+    }
+
     if (current_item < checklist_.length) {
-        
+
         if (action == checklist_[current_item].event) {
             row_pointers[current_item].classList.add('checked');
             current_item += 1;
@@ -778,7 +817,8 @@ function show_popup(xx, yy, cockpit_object) {
         for (const key in entries) {
             entry = document.createElement('div');
             entry.className = 'item';
-            entry.innerHTML = entries[key]; // + ' [' + key + ']';
+            //entry.innerHTML = entries[key];
+            entry.innerHTML = entries[key] + ' [' + key + ']';
             entry.onclick = (e) => { popup_click(key); };
             popup_element.append(entry);
         }
